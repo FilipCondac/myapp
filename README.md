@@ -1,6 +1,7 @@
 # myapp
 
-All tasks and extensions completed except R9C. 
+All tasks  completed
+All extensions completed except R9
 All of the pages work as intended with error checking for all possible misinputs.
 Inputs are sanitised and don't allow for SQL injection.
 
@@ -28,4 +29,11 @@ R7B:(main.js, line 236)
 R7C: (main.js, line 238) 
 
 R8: (main.js, line 259)
-R8A: (views
+R8A: (views/search.ejs)
+R8B:(main.js, line 236
+
+R9A+R9B: (views/list.ejs)
+
+R10:(main.js, line 539) has navbar access
+
+R11: All forms are checked and sanitised
