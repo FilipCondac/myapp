@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login for <%=appName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1>Login for <%=appName%></h1>
+    <%- include('navbar') %>
+    <form method="POST" action="/loggedin">
+        <p>Email: <input id="email" type="email" name="email"  /></p>
+        <p>Password<input id="password" type="password" name="password"/></p>
+        <input type="submit" value="Login" />
+      </form>
+  </body>
+  <p><a href="/">Home</a></p>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search <%=appName%></title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1>Search <%=appName%></h1>
+    <%- include('navbar') %>
+    <form action="/search-result" method="GET">
+      <p>What food do you want?</p>
+      <input id="search-box" type="text" name="keyword" value="" />
+      <input type="submit" value="Search" />
+    </form>
+  </body>
+  <p><a href="/">Home</a></p>
+</html>

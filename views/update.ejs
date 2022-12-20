@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update food <%=appName%></title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1>Update food <%=appName%></h1>
+    <%- include('navbar') %>
+    <form action="/search-result-update" method="GET">
+      <p>What food do you want to update?</p>
+      <input id="search-box" type="text" name="keyword" />
+      <input type="submit" value="Search" />
+    </form>
+  </body>
+  <p><a href="/">Home</a></p>
+</html>

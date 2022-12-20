@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add book to <%=appName%></title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=appName%>: Add food to the system</h1>
+    <%- include('navbar') %>
+    <form method="POST" action="/foodadded">
+      <p>Food name: <input id="foodName" type="text" name="foodName" /></p>
+      <p>
+        Typical Values per:
+        <input id="foodWeight" type="text" name="foodWeight" />
+      </p>
+      <p>
+        Unit of Measurement(g/ml):
+        <input id="foodMeasurement" type="text" name="foodMeasurement" />
+      </p>
+      <p>Carbs: <input id="foodCarbs" type="text" name="foodCarbs" />g</p>
+      <p>Fat: <input id="foodFat" type="text" name="foodFat" />g</p>
+      <p>
+        Protein:
+        <input id="foodProtein" type="text" name="foodProtein" />g
+      </p>
+      <p>Salt: <input id="foodSalt" type="text" name="foodSalt" />g</p>
+      <p>Sugar: <input id="foodSugar" type="text" name="foodSugar" />g</p>
+
+      <input type="submit" value="Add" />
+    </form>
+  </body>
+</html>

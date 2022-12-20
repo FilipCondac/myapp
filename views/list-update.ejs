@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to <%=appName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=appName%> Recepies</h1>
+    <%- include('navbar') %>
+    <h2>These are some foods added</h2>
+    <table>
+      <tr class="foodList">
+        <th>Name</th>
+        <th>Typical Values per:</th>
+        <th>Unit of Measurement:</th>
+        <th>Carbs:</th>
+        <th>Fat:</th>
+        <th>Protein:</th>
+        <th>Salt:</th>
+        <th>Sugar:</th>
+      </tr>
+      <form method="POST" action="/foodupdate">
+      <% availableFood.forEach(function(food) { %>
+       <tr class="foodList">
+        <td id="foodName"><%= food.foodName %> </td>
+        <td><%= food.foodWeight %> </td>
+        <td><%=food.foodMeasurement %></td>
+        <td><%=food.foodCarbs%></td>
+        <td><%=food.foodFat%></td>
+        <td><%=food.foodProtein%></td>
+        <td><%=food.foodSalt%></td>
+        <td><%=food.foodSugar%></td>
+       </tr>
+       <tr>
+          <td><input id="foodName" type="text" name="foodNameUpdated" value=<%= food.foodName %> />  </td>
+          <td> <input id="foodWeight" type="text" name="foodWeightUpdated" value=<%= food.foodWeight %> /></td>
+          <td> <input id="foodMeasurement" type="text" name="foodMeasurementUpdated" value=<%=food.foodMeasurement %> /></td>
+          <td> <input id="foodCarbs" type="text" name="foodCarbsUpdated" value=<%=food.foodCarbs%> /></td>
+          <td><input id="foodFat" type="text" name="foodFatUpdated" value=<%=food.foodCarbs%> /></td>
+          <td><input id="foodProtein" type="text" name="foodProteinUpdated" value=<%=food.foodFat%> /></td>
+          <td> <input id="foodSalt" type="text" name="foodSaltUpdated" value=<%=food.foodProtein%> /></td>  
+          <td> <input id="foodSugar" type="text" name="foodSugarUpdated" value=<%=food.foodSugar%> /></td> 
+          <td><input id="foodID" style="display: none;" type="text" name="foodIDUpdated" value=<%= food.foodID %> />  </td>
+          <td><input id="foodUser" style="display: none;" type="text" name="foodUser" value=<%= food.foodUser %> />  </td>
+         <td> <input type="submit" value="Update" /></td> 
+       </tr>
+       
+      <% }) %>
+    </table>
+    </body>
+
+</html>

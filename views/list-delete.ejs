@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to <%=appName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=appName%> Recepies</h1>
+    <%- include('navbar') %>
+    <h2>These are some foods added</h2>
+    <table>
+      <tr class="foodList">
+        <th>Name</th>
+        <th>Typical Values per:</th>
+        <th>Unit of Measurement:</th>
+        <th>Carbs:</th>
+        <th>Fat:</th>
+        <th>Protein:</th>
+        <th>Salt:</th>
+        <th>Sugar:</th>
+      </tr>
+      <form method="POST" action="/deletefood">
+      <% availableFood.forEach(function(food) { %>
+       <tr class="foodList">
+        <td id="foodName"><%= food.foodName %> </td>
+        <td><%= food.foodWeight %> </td>
+        <td><%=food.foodMeasurement %></td>
+        <td><%=food.foodCarbs%></td>
+        <td><%=food.foodFat%></td>
+        <td><%=food.foodProtein%></td>
+        <td><%=food.foodSalt%></td>
+        <td><%=food.foodSugar%></td>
+        <td><input id="foodID" style="display: none;" type="text" name="foodID" value=<%= food.foodID %> />  </td>
+          <td><input id="foodUser" style="display: none;" type="text" name="foodUser" value=<%= food.foodUser %> />  </td>
+         <td> <input type="submit" value="Delete" /></td> 
+       </tr>
+       
+      <% }) %>
+    </table>
+    </body>
+
+</html>
