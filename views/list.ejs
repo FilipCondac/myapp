@@ -30,12 +30,7 @@
         <td><%=food.foodProtein%></td>
         <td><%=food.foodSalt%></td>
         <td><%=food.foodSugar%></td>
-        <!-- Form that sends data about the item chosen to delete -->
-        <td><form method="POST" action="/delete">
-          <input type="hidden" name="foodUser" value=<%= food.foodUser %> />
-          <input type="hidden" name="foodID" value=<%= food.foodID %> />
-          <input type="submit" value="Delete">
-      </td>
+       
       </tr>
       <% }) %>
     </form>
